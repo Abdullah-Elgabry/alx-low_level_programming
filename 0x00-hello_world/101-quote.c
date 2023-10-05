@@ -10,7 +10,7 @@
 */
 
 int main(void)
-{	char doubqo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(1, doubqo, 59);
+{	char dou[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(1, dou, 59);
 	return (1);
 }
