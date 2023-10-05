@@ -10,8 +10,7 @@
 */
 
 int main(void)
-{	
-	char doubqo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(1, doubqo, (sizeof(quo) / sizeof(char)));
+{	char doubqo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(1, doubqo, 59);
 	return (1);
 }
