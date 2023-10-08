@@ -25,7 +25,7 @@ int main(void)
 				putchar(' ');
 				putchar((nd_start / 10) + 48);
 				putchar((nd_start) % 10 + 48);
-				if (st_start != 98 ||  nd_start != 90)
+				if (st_start + nd_start != 197)
 				{
 					putchar(',');
 					putchar(' ');
