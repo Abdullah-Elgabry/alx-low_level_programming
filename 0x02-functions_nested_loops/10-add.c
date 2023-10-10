@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha  -  this fun adds 2 int
+ * add -  this fun adds 2 int
  *
  * @ch: input of fun
  *
