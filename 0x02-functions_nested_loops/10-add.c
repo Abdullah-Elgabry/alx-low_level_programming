@@ -3,7 +3,8 @@
 /**
  * add - this fun adds 2 int
  *
- * @ch: input of fun
+ * @a: input 1
+ * @b: input 2
  *
  * Return: sum of a and b
 */
