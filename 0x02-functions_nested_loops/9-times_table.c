@@ -9,14 +9,14 @@ void times_table(void)
 
 	for (number = 0; number <= 9; number++)
 	{
-		_putchar(48)
+		_putchar(48);
 		for (muliply = 1; muliply <= 9; muliply++)
 		{
 			_putchar(',');
 			_putchar(' ');
 
 
-			product = num * muliply
+			product = num * muliply;
 
 			if (product <= 9)
 				_putchar(' ');
