@@ -12,9 +12,9 @@ void print_to_98(int nutral)
 
 	if (nutral > 98)
 		for (c = nutral; c > 98; c--)
-			printf("%d, ",  c);
+			printf("%d, ", c);
 	else
 		for (c = nutral; c < 98; c++)
-			printf("%d, " c);
+			printf("%d, ", c);
 	printf("98\n");
 }
