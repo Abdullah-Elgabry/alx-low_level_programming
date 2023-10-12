@@ -22,7 +22,7 @@ int main(void)
 	num /= 2;
 	}
 
-	for (i = 3; i <= sqrt(n); i = i + 2)
+	for (i = 3; i <= sqrt(num); i = i + 2)
 	{
 	while (num % i == 0)
 	{
