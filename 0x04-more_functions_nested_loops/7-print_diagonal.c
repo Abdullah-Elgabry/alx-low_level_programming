@@ -4,21 +4,22 @@
  * print_diagonal - fun that draws a diagonal line on the terminal.
  *
  * @n: number of \ that will print
+ * return: voidi
 */
 
 void print_diagonal(int n)
 {
-	int dir, space;
-
 	if (n <= 0)
 		_putchar('\n');
 	else
 	{
-		for (dir = 1; dir <= n; dir++)
+		int i, j;
+
+		for (i = 0; i < n; i++)
 		{
-			for (space = 1; space <= dir; space++)
+			for (j = 0; j <= i; j++)
 				_putchar(' ');
-			_putchar(92);
+			_putchar('\\');
 			_putchar('\n');
 		}
 	}
