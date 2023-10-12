@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers -fun prints numbers from 0-9
+ * print_most_numbers -fun prints numbers from 0-9 except 2 & 4
  *
  * Return: 0 means success
 */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int i;
 
