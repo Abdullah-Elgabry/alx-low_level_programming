@@ -6,7 +6,7 @@
  * Return: 0 means success
 */
 
-int print_numbers(void)
+void print_numbers(void)
 {
 	int i = 0;
 
