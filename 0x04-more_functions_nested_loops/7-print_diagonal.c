@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_line - fun that draws a straight line in the terminal.
+ * print_diagonal - fun that draws a diagonal line on the terminal.
  *
- * @l: number of _ that will print
+ * @l: number of / that will print
 */
 
 void print_diagonal(int l)
