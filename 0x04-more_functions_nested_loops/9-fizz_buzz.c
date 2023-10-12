@@ -3,10 +3,14 @@
 
 /**
  * main - prints the numbers from 1 to 100, followed by a new line
+ *
  * but for multiples of three prints Fizz instead of the number
+ * 
  * and for the multiples of five prints Buzz
- * Return: Always 0 (Success)
+ *
+ * Return: 0 (Success)
 */
+
 int main(void)
 {
 	int num;
@@ -21,7 +25,7 @@ int main(void)
 		{
 			printf("Buzz")
 		}
-		else if (num % 5 == 0 && num % 3 == 0)
+		else if (num % 3 == 0 && num % 5 == 0)
 		{
 			printf("FizzBuzz")
 		}
@@ -33,5 +37,6 @@ int main(void)
 		else
 			printf("\n");
 	}
+
 	return (0);
 }
