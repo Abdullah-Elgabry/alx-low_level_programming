@@ -7,13 +7,12 @@
 */
 
 int print_numbers(void)
-{
+{i
 	int i;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i < 9; i++)
 	{
 		putchar('0' + i);
 	}
 		putchar('\n');
-		return (0);
 }
