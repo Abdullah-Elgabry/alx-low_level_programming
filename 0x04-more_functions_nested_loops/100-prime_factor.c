@@ -4,7 +4,7 @@
 /**
  * main - print the largest prime factor of this number 612852475143
  *
- * Return:  0 (Success)
+ * Return: 0 (Success)
  */
 
 int main(void)
@@ -18,16 +18,16 @@ int main(void)
 
 	while (num % 2 == 0)
 	{
-	maximumx = 2;
-	num /= 2;
+		maximumx = 2;
+		num /= 2;
 	}
 
 	for (i = 3; i <= sqrt(num); i = i + 2)
 	{
 	while (num % i == 0)
 	{
-	maximum = i;
-	num = num / i;
+		maximum = i;
+		num = num / i;
 	}
 	}
 
