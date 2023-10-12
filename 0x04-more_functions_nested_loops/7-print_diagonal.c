@@ -17,9 +17,11 @@ void print_diagonal(int l)
 		for (dir = 1; dir <= l; dir++)
 		{
 			for (space = 1; space <= dir; space++)
+			{
 				_putchar(' ');
 			_putchar(92);
 			_putchar('\n');
+			}
 		}
 	}
 }
