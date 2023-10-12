@@ -12,7 +12,7 @@ void print_square(int s)
 {
 	int r, col;
 
-	for (r = 1; col <= s; col++)
+	for (r = 1; r <= s; r++)
 	{
 		for (col = 1; col <= s; col++)
 
