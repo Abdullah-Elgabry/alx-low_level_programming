@@ -4,7 +4,7 @@
  * print_diagonal - fun that draws a diagonal line on the terminal.
  *
  * @n: number of \ that will print
- * return: voidi
+ * return: void
 */
 
 void print_diagonal(int n)
