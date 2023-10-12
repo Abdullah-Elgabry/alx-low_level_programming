@@ -12,7 +12,7 @@ void print_square(int s)
 {
 	int r, col;
 
-	if (size <= 0)
+	if (s <= 0)
 		_putchar('\n');
 
 	for (r = 1; r <= s; r++)
