@@ -6,15 +6,15 @@
  * @l: number of / that will print
 */
 
-void print_diagonal(int l)
+void print_diagonal(int n)
 {
 	int dir, space;
 
-	if (l <= 0)
+	if (n <= 0)
 		_putchar('\n');
 	else
 	{
-		for (dir = 1; dir <= l; dir++)
+		for (dir = 1; dir <= n; dir++)
 		{
 			for (space = 1; space <= dir; space++)
 			{
