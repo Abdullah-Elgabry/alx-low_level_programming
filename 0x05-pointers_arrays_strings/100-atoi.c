@@ -17,10 +17,10 @@ int _atoi(char *c)
 		if (*c == '-')
 		{
 			s *= -1;
-		}
-		else if (*c >= '0' && *s <= '9')
+		}i
+		else if (*c >= '0' && *c <= '9')
 		{
-			n = (n * 10) + (*s - '0');
+			n = (n * 10) + (*c - '0');
 		}
 		else if (n > 0)
 			break;
