@@ -9,7 +9,7 @@
 */
 
 int main(void)
-{	
+{
 	int s;
 	char c;
 
@@ -21,5 +21,5 @@ int main(void)
 		putchar(c);
 	}
 	putchar (2772 - s);
-	return(0);
+	return (0);
 }
