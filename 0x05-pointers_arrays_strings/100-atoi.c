@@ -8,7 +8,7 @@
  * Return: integer
 */
 
-void _atoi(char *c)
+int _atoi(char *c)
 {
 	unsigned int n = 0;
 	int s = 1;
