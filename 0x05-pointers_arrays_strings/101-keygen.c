@@ -9,7 +9,6 @@
 */
 
 int main(void)
-int main(void)
 {
 	int s;
 	char c;
