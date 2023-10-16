@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_rev  - prints a string, in reverse, followed by a new line.
+ * rev_string- prints a string, in reverse
  *
  * @rev: this is the ptr to str will be printed
  *
  * Return: void
 */
 
-void print_rev(char *rev)
+void rev_string(char *rev)
 {
 	int c = 0;
 	int r;
