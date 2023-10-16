@@ -8,7 +8,7 @@
  * return: nothing
 */
 
-void reset_to_98 (int *ptr)
+void reset_to_98(int *ptr)
 {
 	*ptr = 98;
 }
