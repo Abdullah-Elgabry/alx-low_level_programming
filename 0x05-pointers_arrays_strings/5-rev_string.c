@@ -5,7 +5,7 @@
  *
  * @rev: this is the ptr to str will be printed
  *
- * Return: void
+ * Return: Nothing
 */
 
 void rev_string(char *rev)
