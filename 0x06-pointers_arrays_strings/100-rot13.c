@@ -20,7 +20,7 @@ char *rot13(char *c)
 	{
 		for (st = 0; st <= 52; st++)
 		{
-			if (*s == rot13[st])
+			if (*c == rot13[st])
 			{
 				*c = ROT13[st];
 				break;
