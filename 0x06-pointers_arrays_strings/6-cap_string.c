@@ -32,9 +32,8 @@ int separators(char c)
 
 	for (check = 0; check < 12; check++)
 		if (c == separators[check])
-		{
 			return (1);
-		}
+
 	return (0);
 }
 
@@ -49,7 +48,7 @@ int separators(char c)
 
 char *cap_string(char *str)
 {
-	char *p = s;
+	char *p = str;
 	int sep = 1;
 
 	while (*str)
