@@ -54,9 +54,7 @@ char *cap_string(char *str)
 	while (*str)
 	{
 		if (separators(*str))
-		{
 			sep = 1;
-		}
 		else if (lower(*str) && sep)
 		{
 			*str -= 32;
@@ -64,7 +62,7 @@ char *cap_string(char *str)
 		}
 		else
 			sep = 0;
-		str++
+		str++;
 	}
 	return (p);
 }
