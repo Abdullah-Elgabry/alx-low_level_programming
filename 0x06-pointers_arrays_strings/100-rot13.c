@@ -26,7 +26,7 @@ char *rot13(char *c)
 				break;
 			}
 		}
-		c++
+		c++;
 	}
 	return (p);
 }
