@@ -17,11 +17,11 @@ char *leet(char *s)
 
 	while (*s)
 	{
-		for (check = 0; check < sizeof(key) / sizeof(char); check++)
+		for (check = 0; check < sizeof(to_replace) / sizeof(char); check++)
 		{
-			if (*s == key[check] || *s == key[check] + 32)
+			if (*s == to_replace[check] || *s == to_replace[check] + 32)
 			{
-				*s = 48 + value[check];
+				*s = 48 + v[check];
 			}
 		}
 		s++;
