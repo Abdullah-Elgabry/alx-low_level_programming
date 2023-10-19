@@ -3,45 +3,45 @@
 /**
  *infinite_add - add two numbers.
  *
- *@n1: first number.
- *@n2: second number.
+ *@n1: 1st number.
+ *@n2: 2nd number.
  *@r: result.
- *@size_r: result size.
- *Return: the addition of n1 and n2.
+ *@size_r: result length.
+ *Return: sum of n1 + n2.
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int add = 0, len1, len2, i, j;
+	int plus = 0, input1, input2, i, j;
 
-	for (len1 = 0; n1[len1]; len1++)
+	for (input1 = 0; n1[input1]; input1++)
 	;
-	for (len2 = 0; n2[len2]; len2++)
+	for (input2 = 0; n2[input2]; input2++)
 	;
-	if (len1 > size_r || len2 > size_r)
+	if (input1 > size_r || input2 > size_r)
 		return (0);
-	len1--;
-	len2--;
+	input1--;
+	input2--;
 	size_r--;
-	for (i = 0; i < size_r; i++, len1--, len2--)
+	for (i = 0; i < size_r; i++, input1--, input2--)
 	{
-		if (len1 >= 0)
-			add += n1[len1] - '0';
-		if (len2 >= 0)
-			add += n2[len2] - '0';
-		if (len1 < 0 && len2 < 0 && add == 0)
+		if (input1 >= 0)
+			plus += n1[input1] - '0';
+		if (input2 >= 0)
+			plus += n2[input2] - '0';
+		if (input1 < 0 && input2 < 0 && plus == 0)
 			break;
-		r[i] = add % 10 + '0';
-		add /= 10;
+		r[i] = plus % 10 + '0';
+		plus /= 10;
 	}
 	r[i] = '\0';
-	if (len1 >= 0 || len2 >= 0 || add)
+	if (input1 >= 0 || input2 >= 0 || plus)
 		return (0);
 	for (i--, j = 0; i > j; i--, j++)
 	{
-		add = r[i];
+		plus = r[i];
 		r[i] = r[j];
-		r[j] = add;
+		r[j] = plus;
 	}
 	return (r);
 }
