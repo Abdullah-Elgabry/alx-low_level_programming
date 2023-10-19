@@ -12,7 +12,7 @@ char *leet(char *s)
 {
 	char *c = s;
 	char to_replace[] = {'A', 'E', 'O', 'T', 'L'};
-	int v [] = {4, 1, 0, 7, 3};
+	int v [] = {4, 3, 0, 7, 1};
 	unsigned int check;
 
 	while (*s)
@@ -26,5 +26,6 @@ char *leet(char *s)
 		}
 		s++;
 	}
+
 	return (c);
 }
