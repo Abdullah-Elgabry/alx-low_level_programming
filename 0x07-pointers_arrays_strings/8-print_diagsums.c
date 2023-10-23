@@ -7,11 +7,9 @@
  * @a: array will be given
  *
  * @size: this is the size of array
- *
- * Return: this is a void fun
 */
 
-void print_diagsums(int *a, int size);
+void print_diagsums(int *a, int size)
 {
 	int i, dx = 0, dy = 0;
 
