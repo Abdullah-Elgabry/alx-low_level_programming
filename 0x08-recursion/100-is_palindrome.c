@@ -29,7 +29,7 @@ int _cmp(char *s, char *p)
  */
 
 
-char _rev(char *s)
+char *_rev(char *s)
 {
 	if (*s != '\0')
 		return (_rev(++s));
