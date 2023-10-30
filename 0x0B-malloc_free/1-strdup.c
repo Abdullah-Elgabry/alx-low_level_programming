@@ -12,24 +12,24 @@
 
 char *_strdup(char *str)
 {
-	int i, size = 0;
-	char *m;
+	int i = 0, j = 0;
+	char *s;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0 ; str[size] != '\0'; size++)
+	for (; str[j] != '\0'; j++)
 
-	m = malloc(size * sizeof(*str) + 1);
+	s = malloc(j * sizeof(*str) + 1);
 
-	if (m == 0)
+	if (s == 0)
 	{
 		return (NULL);
 	}
 	else
 	{
-		for (i = 0; i < size; i++)
-			m[i] = str[i];
+		for (; i < j; i++)
+			s[i] = str[i];
 	}
-	return (m);
+	return (s);
 }
