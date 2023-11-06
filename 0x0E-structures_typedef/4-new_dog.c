@@ -9,46 +9,44 @@
  * Return: lenof string
  */
 
-
- 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *P;
-	int s, len, own;
+	dog_t *_dog;
+	int i, lname, lowner;
 
-	P = malloc(sizeof(*P));
-	if (P == NULL || !(name) || !(owner))
+	_dog = malloc(sizeof(*_dog));
+	if (_dog == NULL || !(name) || !(owner))
 	{
-		free(P);
+		free(_dog);
 		return (NULL);
 	}
 
-	for (len = 0; name[len]; len++)
+	for (lname = 0; name[lname]; lname++)
 		;
 
-	for (own = 0; owner[own]; own++)
+	for (lowner = 0; owner[lowner]; lowner++)
 		;
 
-	P->name = malloc(len + 1);
-	P->owner = malloc(own + 1);
+	_dog->name = malloc(lname + 1);
+	_dog->owner = malloc(lowner + 1);
 
-	if (!(P->name) || !(P->owner))
+	if (!(_dog->name) || !(_dog->owner))
 	{
-		free(P->owner);
-		free(P->name);
-		free(P);
+		free(_dog->owner);
+		free(_dog->name);
+		free(_dog);
 		return (NULL);
 	}
 
-	for (s = 0; s < len; s++)
-		P->name[s] = name[s];
-	P->name[s] = '\0';
+	for (i = 0; i < lname; i++)
+		_dog->name[i] = name[i];
+	_dog->name[i] = '\0';
 
-	P->age = age;
+	_dog->age = age;
 
-	for (s = 0; s < own; s++)
-		P->owner[s] = owner[s];
-	P->owner[s] = '\0';
+	for (i = 0; i < lowner; i++)
+		_dog->owner[i] = owner[i];
+	_dog->owner[i] = '\0';
 
-	return (P);
+	return (_dog);
 }
