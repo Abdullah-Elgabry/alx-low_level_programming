@@ -4,7 +4,7 @@
 * print_name - fun will print the name
 *
 *@name: the name will be printed
-
+*
 *@f: print fun ptr
 */
 
