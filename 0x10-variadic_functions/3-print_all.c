@@ -1,22 +1,22 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - a function that prints anything.
+ * print_all -  a function that prints anything.
  *
- * @F: type of arg
+ * @format: type of arg
  *
  */
 
-void print_all(const char * const F, ...)
+void print_all(const char * const format, ...)
 {
 	unsigned int st = 0;
 	char *S;
 	va_list L;
 
-	va_start(L, F);
-	while (F && F[st] != '\0')
+	va_start(L, format);
+	while (format && format[st] != '\0')
 	{
-		switch (F[st])
+		switch (format[st])
 		{
 		case 'c':
 			printf("%c", va_arg(L, int));
@@ -40,7 +40,7 @@ void print_all(const char * const F, ...)
 			st++;
 			continue;
 		}
-		if (F[st + 1] != '\0')
+		if (format[st + 1] != '\0')
 			printf(", ");
 
 		st++;
