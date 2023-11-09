@@ -1,50 +1,51 @@
 #include "variadic_functions.h"
 
 /**
- * print_all -  a function that prints anything.
+ * print_all - function that prints anything.
  *
- * @format: type of arg
+ * @format: format of arg
  *
  */
 
 void print_all(const char * const format, ...)
 {
-	unsigned int st = 0;
-	char *S;
-	va_list L;
+	int s = 0;
+	char *strin, *term = "";
 
-	va_start(L, format);
-	while (format && format[st] != '\0')
+	va_list list;
+
+	va_start(list, format);
+
+	if (format)
 	{
-		switch (format[st])
+		while (format[s])
 		{
-		case 'c':
-			printf("%c", va_arg(L, int));
-			break;
-		case 'st':
-			printf("%st", va_arg(L, int));
-			break;
-		case 'f':
-			printf("%f", va_arg(L, double));
-			break;
-		case 's':
-			S = va_arg(L, char *);
-			if (S)
+			switch (format[s])
 			{
-				printf("%s", S);
-				break;
+				case 'c':
+					printf("%s%c", term, va_arg(list, int));
+					break;
+				case 's':
+					printf("%s%d", term, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", term, va_arg(list, double));
+					break;
+				case 's':
+					strin = va_arg(list, char *);
+					if (!strin)
+						strin = "(nil)";
+					printf("%s%s", term, strin);
+					break;
+				default:
+					s++;
+					continue;
 			}
-			printf("(nil)");
-			break;
-		default:
-			st++;
-			continue;
+			term = ", ";
+			s++;
 		}
-		if (format[st + 1] != '\0')
-			printf(", ");
-
-		st++;
 	}
+
 	printf("\n");
-	va_end(L);
+	va_end(list);
 }
