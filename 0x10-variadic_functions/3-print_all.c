@@ -5,7 +5,7 @@
 /**
  * print_all - a function that prints anything.
  *
- * @format: lst of arg.
+ * @format: l of arg.
  *
  * Return: always zero.
  */
@@ -14,8 +14,8 @@ void print_all(const char * const format, ...)
 {
 	va_list valist;
 	int n = 0, q = 0;
-	char *term = ", ";
-	char *s;
+	char *sep = ", ";
+	char *newl;
 
 	va_start(valist, format);
 
@@ -26,24 +26,24 @@ void print_all(const char * const format, ...)
 	{
 		if (n  == (q - 1))
 		{
-			term = "";
+			sep = "";
 		}
 		switch (format[n])
 		{
 		case 'c':
-			printf("%c%s", va_arg(valist, int), term);
+			printf("%c%s", va_arg(valist, int), sep);
 			break;
 		case 'q':
-			printf("%d%s", va_arg(valist, int), term);
+			printf("%d%s", va_arg(valist, int), sep);
 			break;
 		case 'f':
-			printf("%f%s", va_arg(valist, double), term);
+			printf("%f%s", va_arg(valist, double), sep);
 			break;
 		case 's':
-			s = va_arg(valist, char *);
-			if (s == NULL)
-				s = "(nil)";
-			printf("%s%s", s, term);
+			newl = va_arg(valist, char *);
+			if (newl == NULL)
+				newl = "(nil)";
+			printf("%s%s", newl, sep);
 			break;
 		}
 		n++;
