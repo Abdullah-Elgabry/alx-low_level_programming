@@ -5,49 +5,49 @@
 /**
  * print_all - a function that prints anything.
  *
- * @format: l of arg.
+ * @format: lst of arg.
  *
  * Return: always zero.
  */
 
 void print_all(const char * const format, ...)
 {
-	va_list LfV;
-	int st = 0, en = 0;
+	va_list valist;
+	int n = 0, q = 0;
 	char *term = ", ";
-	char *str;
+	char *s;
 
-	va_start(LfV, format);
+	va_start(valist, format);
 
-	while (format && format[en])
-		en++;
+	while (format && format[q])
+		q++;
 
-	while (format && format[st])
+	while (format && format[n])
 	{
-		if (st  == (en - 1))
+		if (n  == (q - 1))
 		{
 			term = "";
 		}
-		switch (format[st])
+		switch (format[n])
 		{
 		case 'c':
-			printf("%c%s", va_arg(LfV, int), term);
+			printf("%c%s", va_arg(valist, int), term);
 			break;
-		case 'en':
-			printf("%d%s", va_arg(LfV, int), term);
+		case 'q':
+			printf("%d%s", va_arg(valist, int), term);
 			break;
 		case 'f':
-			printf("%f%s", va_arg(LfV, double), term);
+			printf("%f%s", va_arg(valist, double), term);
 			break;
 		case 's':
-			str = va_arg(LfV, char *);
-			if (str == NULL)
-				str = "(nil)";
-			printf("%s%s", str, term);
+			s = va_arg(valist, char *);
+			if (s == NULL)
+				s = "(nil)";
+			printf("%s%s", s, term);
 			break;
 		}
-		st++;
+		n++;
 	}
 	printf("\n");
-	va_end(LfV);
+	va_end(valist);
 }
