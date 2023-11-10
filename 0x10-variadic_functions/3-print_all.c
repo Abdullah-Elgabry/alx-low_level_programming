@@ -5,7 +5,7 @@
 /**
  * print_all - a function that prints anything.
  *
- * @format: l of arg.
+ * @format: lst of arg.
  *
  * Return: always zero.
  */
@@ -48,6 +48,6 @@ void print_all(const char * const format, ...)
 		}
 		st++;
 	}
-	printf("\st");
+	printf("\n");
 	va_end(LfV);
 }
