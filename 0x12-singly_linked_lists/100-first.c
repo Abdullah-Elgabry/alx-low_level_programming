@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-void first(void) __attribute__ ((constructor));
+void print(void) __attribute__ ((constructor));
 
 /**
  * print - this func will prints some str before the main func
