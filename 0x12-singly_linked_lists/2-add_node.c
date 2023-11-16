@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * add_node - this func will add nodes at the begnning
  *
@@ -12,22 +11,24 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_head = malloc(sizeof(list_t));
+	int i, count = 0;
+	list_t *new;
 
-	if (!head || !new_head)
+	if (head == NULL)
 		return (NULL);
-	if (str)
-	{
-		new_head->str = strdup(str);
-		if (!new_head->str)
-		{
-			free(new_head);
-			return (NULL);
-		}
-		new_head->len = _strlen(new_head->str);
-	}
 
-	new_head->next = *head;
-	*head = new_head;
-	return (new_head);
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
+
+	for (i = 0; str[i] != '\0'; i++)
+		count++;
+
+	new->len = i;
+	new->str = strdup(str);
+	new->next = *head;
+
+	*head = new;
+
+	return (new);
 }
