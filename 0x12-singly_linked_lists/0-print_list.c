@@ -3,11 +3,11 @@
 
 /**
  * _getlen - this func will return the len of the str
- *
+ 
  * @st: str will be checked
  *
  * Return: len of the str
- *
+
  */
 
 
@@ -23,11 +23,13 @@ int _getlen(char *st)
 }
 
 /**
- * print_list - prints a linked lists
- * @h: pointer to first node
+ * print_list - this func will print the L list
  *
- * Return: size of list
+ * @h: ptr
+ *
+ * Return: the size of the list
  */
+
 size_t print_list(const list_t *h)
 {
 	size_t j = 0;
