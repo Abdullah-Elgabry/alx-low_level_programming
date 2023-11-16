@@ -1,5 +1,4 @@
-#i  include "lists.h"
-
+#include "lists.h"
 
 /**
  * _getlen - this func will return the len of the str
