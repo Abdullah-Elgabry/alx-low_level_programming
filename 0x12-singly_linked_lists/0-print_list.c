@@ -1,13 +1,13 @@
-#include "lists.h"
+#i  include "lists.h"
 
 
 /**
  * _getlen - this func will return the len of the str
- 
+ *
  * @st: str will be checked
  *
  * Return: len of the str
-
+ *
  */
 
 
