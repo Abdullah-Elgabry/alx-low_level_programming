@@ -4,7 +4,7 @@
 
 
 /**
- * add_node - this func will add nodes at the end
+ * add_node_end - this func will add nodes at the end
  *
  * @head: this is the address
  *
@@ -13,35 +13,36 @@
  * Return: zero
  *
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
-	int i, count = 0;
-	list_t *new;
-	list_t *temp;
+	int j, _c = 0;
+	list_t *_n_node;
+	list_t *store;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	_n_node = malloc(sizeof(list_t));
+	if (_n_node == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
-		count++;
+	for (j = 0; str[j] != '\0'; j++)
+		_c++;
 
-	new->len = i;
-	new->str = strdup(str);
-	new->next = NULL;
+	_n_node->len = j;
+	_n_node->str = strdup(str);
+	_n_node->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = _n_node;
+		return (_n_node);
 	}
 
-	temp = *head;
+	store = *head;
 
-	while (temp->next != NULL)
-		temp = temp->next;
+	while (store->next != NULL)
+		store = store->next;
 
-	temp->next = new;
+	store->next = _n_node;
 
-	return (new);
+	return (_n_node);
 }
