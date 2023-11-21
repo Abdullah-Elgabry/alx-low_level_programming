@@ -7,36 +7,37 @@
  *
  * @index: node index.
  *
- * Return:  Return: 1 on success,
- * -1 on failure.
+ * Return: 1 if it succeeded,
+ * -1 if it failed.
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *_node, *_nxt_node;
-	unsigned int i;
+	listint_t *_current_node, *past_node;
+	unsigned int i = 0;
 
-	if (head == NULL || *head == NULL)
+	if (!head || !*head)
 		return (-1);
 
-	_node = *head;
-	if (index == 0)
+	if (!index)
 	{
-		*head = _node->_nxt_node;
-		free(_node);
+		_current_node = *head;
+		*head = (*head)->next;
+		free(_current_node);
 		return (1);
 	}
-
-	for (i = 0; i < index - 1; i++)
+	_current_node = *head;
+	while (_current_node)
 	{
-		if (_node->_nxt_node == NULL)
-			return (-1);
-		_node = _node->_nxt_node;
+		if (i == index)
+		{
+			past_node->next = _current_node->next;
+			free(_current_node);
+			return (1);
+		}
+		i++;
+		past_node = _current_node;
+		_current_node = _current_node->next;
 	}
-
-	_nxt_node = _node->_nxt_node->_nxt_node;
-	free(_node->_nxt_node);
-	_node->_nxt_node = _nxt_node;
-
-	return (1);
+	return (-1);
 }
