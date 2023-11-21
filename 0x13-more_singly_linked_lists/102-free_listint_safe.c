@@ -5,29 +5,38 @@
  *
  * @h: 1st node ptr.
  *
- * Return: list size.
+ * Return: list size
  */
 
 size_t free_listint_safe(listint_t **h)
 {
-	size_t i = 0;
-	listint_t *_node = *h;
+	size_t siz = 0;
+	int disc;
+	listint_t *_node;
 
-	if (h == NULL)
-		exit(98);
+	if (!h || !*h)
+		return (0);
 
-	while (_node != NULL)
+	while (*h)
 	{
-		*h = _node->next;
-		free(_node);
-		_node = *h;
-		i++;
-		if (_node <= *h)
+		disc = *h - (*h)->next;
+		if (disc > 0)
 		{
-			free(_node);
+			_node = (*h)->next;
+			free(*h);
+			*h = _node;
+			siz++;
+		}
+		else
+		{
+			free(*h);
+			*h = NULL;
+			siz++;
 			break;
 		}
 	}
+
 	*h = NULL;
-	return (i);
+
+	return (siz);
 }
