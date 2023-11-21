@@ -10,14 +10,14 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t s = 0;
+	size_t i = 0;
 	const listint_t *_tent_n = head;
 
 	while (_tent_n != NULL)
 	{
 		printf("[%p] %d\n", (void *)_tent_n, _tent_n->n);
 		_tent_n = _tent_n->next;
-		s++;
+		i++;
 	}
-	return (s);
+	return (i);
 }
