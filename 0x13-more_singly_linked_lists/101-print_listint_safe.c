@@ -8,33 +8,33 @@
  *
  * @head: ptr of the 1st node
  *
- * Return: nodes number.
+ * Return: nodes num.
  */
 
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t i, _number = 0;
+	size_t i, num = 0;
 	const listint_t **_old_list = NULL;
 
 	while (head != NULL)
 	{
-		for (i = 0; i < _number; i++)
+		for (i = 0; i < num; i++)
 		{
 			if (head == _old_list[i])
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
 				free(_old_list);
-				return (_number);
+				return (num);
 			}
 		}
-		_number++;
-		_old_list = _allocte(_old_list, _number, head);
+		num++;
+		_old_list = _allocte(_old_list, num, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
 	free(_old_list);
-	return (_number);
+	return (num);
 }
 
 
