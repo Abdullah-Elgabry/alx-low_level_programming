@@ -5,31 +5,32 @@
 
 
 /**
- * _allocte - this fun will alloc the meamory.
+ * _alloc - this fun will alloc the meamory.
  *
  * @_old_list: this is the past one.
  *
- * @_old_list_size: the _new_node _old_list _old_list_size.
+ * @_old_l: the _new _old_list
  *
- * @_new_node: this is the _new_node node.
+ * @_new: this is the _new node.
  *
  * Return: ptr
  */
 
-const listint_t **_allocte(const listint_t **_old_list, size_t _old_list_size, const listint_t *_new_node)
+const listint_t **_alloc(const listint_t **_old_list,
+size_t _old_l, const listint_t *_new)
 {
 	const listint_t **_new_list;
 	size_t i;
 
-	_new_list = malloc(_old_list_size * sizeof(listint_t *));
+	_new_list = malloc(_old_l * sizeof(listint_t *));
 	if (_new_list == NULL)
 	{
 		free(_old_list);
 		exit(98);
 	}
-	for (i = 0; i < _old_list_size - 1; i++)
+	for (i = 0; i < _old_l - 1; i++)
 		_new_list[i] = _old_list[i];
-	_new_list[i] = _new_node;
+	_new_list[i] = _new;
 	free(_old_list);
 	return (_new_list);
 }
@@ -61,7 +62,7 @@ size_t print_listint_safe(const listint_t *head)
 			}
 		}
 		num++;
-		_old_list = _allocte(_old_list, num, head);
+		_old_list = _alloc(_old_list, num, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
