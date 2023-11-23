@@ -2,7 +2,7 @@
 
 /**
  * clear_bit - this func will sets the value of a bit to 0
- * at a given index. 
+ * at a given index.
  *
  * @n: indexed num.
  *
