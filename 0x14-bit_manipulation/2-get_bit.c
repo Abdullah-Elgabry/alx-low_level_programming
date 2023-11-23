@@ -7,7 +7,7 @@
  *
  * @index: given bit
  *
- * Return: vit value 
+ * Return: bit value
  * otherwise : (-1)
  */
 
