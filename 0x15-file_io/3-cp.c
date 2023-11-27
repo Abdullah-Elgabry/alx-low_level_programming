@@ -11,11 +11,12 @@
 /**
  * main - this prog will copies the content of a file to another file.
  *
- * @argumc: argument count
+ * @argumc: num of args
  *
- * @argumv: argument vector
+ * @argumv: arry of ptr
  *
- * Return: 1 on success 0 on failure
+ * Return: 1 if can coppy
+ * OR 0 IN FFAIL
  */
 int main(int argumc, char **argumv)
 {
