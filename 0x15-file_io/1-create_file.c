@@ -41,6 +41,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int try_w;
 	ssize_t _byt = 0;
+
 	l = get_len(text_content);
 
 	if (!filename)
