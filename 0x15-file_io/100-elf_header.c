@@ -141,7 +141,7 @@ void _prt_main(Elf64_Ehdr h)
 
 
 /**
- * _prt_osb - ret elf 
+ * _prt_osb - ret elf
  * @h: header
  */
 void _prt_osb(Elf64_Ehdr h)
@@ -303,6 +303,6 @@ int main(int argc, char **argv)
 	_prt_thegen(h);
 	_prt_srt(h);
 	if (close(tryop))
-		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", tryop), exit(98);
+		dprintf(STDERR_FILENO, "can't close file descriptor: %d\n", tryop), exit(98);
 	return (EXIT_SUCCESS);
 }
