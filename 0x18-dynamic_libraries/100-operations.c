@@ -22,7 +22,7 @@ int div(int a, int b) {
 
 int mod(int a, int b) {
     if (b == 0) {
-        printf("Error: u canot div by  0\n\n");
+        printf("Error: u canot div by 0\n");
         return 0;
     }
     return a % b;
